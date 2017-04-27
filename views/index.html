@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Express-Socketio</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Express-Socketio</h1>
+    <p>Welcome to Express-Socketio</p>
+  </body>
+  <script src="/socket.io/socket.io.js"></script>
+  <script type="text/javascript">
+  	var socket = io('//'+document.location.hostname+':'+document.location.port);
+    socket.on('socketToMe', function (data) {
+      console.log(data);
+    });
+  </script>
+</html>
